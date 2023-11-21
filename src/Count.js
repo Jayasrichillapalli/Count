@@ -1,38 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import "./Counter.css"
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
-  const [timer, setTimer] = useState(null);
+  const [count, setCount] = useState(0)
+  const [timer, setTimer] = useState(null)
 
   useEffect(() => {
+    let intervalTime;
+
     if (timer) {
-      const Intervaltime = setInterval(() => {
-        setCount(prevCount => prevCount + 1);
+      intervalTime = setInterval(() => {
+        setCount(prevCount => prevCount + 1)
       }, 1000);
-
-      return clearInterval(Intervaltime);
     }
+
+    return () => {
+      clearInterval(intervalTime)
+    }
+
   }, [timer]);
-
-  const handleStart = () => {
-    if (!timer) {
-      setTimer(true);
-    }
-  }
-
-  const handleStop = () => {
-    if (timer) {
-      setTimer(null);
-    }
-  }
-
+  
   return (
-    <div>
-      <p>{count}</p>
-      <button onClick={handleStart}>Start</button>
-      <button onClick={handleStop}>Stop</button>
+    <div id="counter-section">
+      <p id="count-section"><b>Count : {count}</b></p>
+      <button onClick={() => setTimer(true)}>Start</button>
+      <button onClick={() => setTimer(false)}>Stop</button>
     </div>
   );
-};
+}
 
 export default Counter;
