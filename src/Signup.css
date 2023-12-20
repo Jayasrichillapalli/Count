@@ -1,0 +1,78 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .signup-box, .login-box{
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  form h2{
+    font-family:"Amazon Ember",Arial,sans-serif;
+    
+    margin-top: 20px;
+    margin-bottom: 30px;
+  
+  
+  }
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    ;
+  
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    ;
+  
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #FF9900;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    ;
+  
+  }
+  
+  .login-para {
+    margin-top: 10px;
+    text-align: center;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    ;
+  
+  }
+  .error-message {
+    color:black;
+    margin-top: 10px;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    ;
+
+  }
+  
+  
